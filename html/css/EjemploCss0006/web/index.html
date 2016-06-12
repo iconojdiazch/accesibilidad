@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+        <link href="imagenes/favicon.ico" rel="icon" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="css/principal.css" />
+        <title>Aprender en la web</title>
+        <link rel="stylesheet" type="text/css" href="lib/extjs/resources/css/ext-all.css" />
+        <script type="text/javascript"  src="lib/extjs/adapter/ext/ext-base.js"></script>
+        <script type="text/javascript"  src="lib/extjs/ext-all-debug.js"></script>
+        <script type="text/javascript">
+            function traerAlFrente(id, flag){
+                document.getElementById(id).style.zIndex = flag ? 2 : 0;
+                return false;
+            }
+        </script>
+        <script type="text/javascript" >
+            Ext.override(Ext.dd.DDProxy, {
+                endDrag: function() {
+                    alert('Objeto soltado');
+                }}
+        );
+            Ext.onReady(function(){
+                var dd11 = Ext.get('usuarios');
+                dd11.dd = new Ext.dd.DDProxy('usuarios', 'group');
+                var dz1 = new Ext.dd.DropZone('center', {ddGroup:'group'});
+            });
+            Ext.onReady(
+            function(){
+                Ext.BLANK_IMAGE_URL ="lib/extjs/resources/images/default/s.gif" ;
+			
+            }
+        );
+            Ext.onReady(function(){
+    
+                var boton = Ext.get('usuarios');
+                boton.on('click', function(){
+
+                    // Pestañas
+                    var tabs = new Ext.TabPanel({
+                        region    : 'center',
+                        margins   : '3 3 3 0',
+                        activeTab : 0,
+                        defaults  : {
+                            autoScroll : true
+                        },
+                        items     : [{
+                                title    : 'Registrados',
+                                html     : "Texto de relleno..."
+                            },{
+                                title    : 'Grupos',
+                                html     : "Texto de relleno..."
+                            },{
+                                title    : 'Roles',
+                                html     : "Texto de relleno...",
+                                closable : true
+                            }]
+                    });
+
+                    // Panel para el oeste
+                    var nav = new Ext.Panel({
+                        title       : 'Navegación',
+                        region      : 'west',
+                        split       : true,
+                        width       : 200,
+                        collapsible : true,
+                        margins     : '3 0 3 3',
+                        cmargins    : '3 3 3 3'
+                    });
+
+                    var ventana_usuarios = new Ext.Window({
+                        title    : 'Gestión de usuarios',
+                        closable : true,
+                        width    : 600,
+                        height   : 350,
+                        //border : false,
+                        plain    : true,
+                        layout   : 'border',
+                        items    : [nav, tabs]
+                    });
+
+                    ventana_usuarios.show(boton);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="main">
+            <ul style="position:absolute;left:1%;top:5%;z-index:3;list-style-type: none">
+                <li><img id="usuarios" title="Usuarios" src="imagenes/icon_users.png"/></li>
+                <li><img id="cursos" title="Cursos" src="imagenes/icon_texteditor.png" style="width:8em;height:8em"/></li>
+                <li><img id="ediciones" title="Ediciones" src="imagenes/icon_calendar.png" style="width:8em;height:8em"/></li>
+                <li><img id="mensajes" title="Mensajes" src="imagenes/icon_email.png" style="width:8em;height:8em"/></li>
+                <li><img id="busquedas" title="B&uacute;squedas" src="imagenes/icon_update.png" style="width:8em;height:8em"/></li>
+                <li><img id="noticias" title="Noticias" src="imagenes/icon_browser.png" style="width:8em;height:8em"/></li>
+            </ul>
+
+            <ul style="position:absolute;left:92%;top:12%;z-index:3;list-style-type: none">
+                <li><img src="imagenes/searchoptimization.gif" style="width:8em;height:8em"/></li>
+                <li><img src="imagenes/ayuda1.jpg" style="width:8em;height:8em"/></li>
+                <li><img src="imagenes/icon_calendar.png" style="width:8em;height:8em"/></li>
+                <li><img src="imagenes/icon_email.png" style="width:8em;height:8em"/></li>
+                <li><img src="imagenes/icon_texteditor.png" style="width:8em;height:8em"/></li>
+                <li><img src="imagenes/icon_update.png" style="width:8em;height:8em"/></li>
+            </ul>
+
+            <div id="header" onmouseover="javascript:traerAlFrente(this.id, true);" onmouseout="javascript:traerAlFrente(this.id, false);">
+                <img src="imagenes/at-work.gif" align="top" style="margin-top:1%"/> Formaci&oacute;n en Nuevas Tecnolog&iacute;as
+            </div>
+            <div id="center">
+                <p style="text-align: center;color:#aaa;font-size: 2.0em">Arrastra y suelta aqu&iacute; los iconos que ves a ambos lados</p>
+            </div>
+            <div id="footer" onmouseover="javascript:traerAlFrente(this.id, true);" onmouseout="javascript:traerAlFrente(this.id, false);">
+	Copyright &copy; 2015
+                <a href="http://formanntt.blogspot.com" target="_blank">
+	Jos&eacute; Mar&iacute;a D&iacute;az Charc&aacute;n</a>, miembro de
+                <a href="http://iconotc.com" target="_blank">Icono Training Consulting</a>
+            </div>
+        </div>
+    </body>
+</html>

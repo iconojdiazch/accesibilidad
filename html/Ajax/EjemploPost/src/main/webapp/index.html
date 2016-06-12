@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+        <script type="text/javascript">
+            var sinUsar = setInterval(
+                    function ()
+                    {
+                        $('#contador').load('contar');
+                    }, 1000);
+            function ajaxPost() {
+                $.ajax({
+                    type: "POST",
+                    url: "post",
+                    data: {"mensaje": $("#mensaje").val()},
+                    success: function (data, textStatus, jqXHR) {
+                        console.log(data);
+                        eval("var r=" + data);
+                        $("#enviado").css('color', 'red');
+                        $("#enviado").html("Devuelto por el servidor " + r.enviado);
+                        $("#recibido").css({'color': 'blue', 'font-size': '150%'});
+                        $("#recibido").html("Recibido por el servidor: " + r.recibido);
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        $("#hueco").html("Error: " + textStatus + " " + errorThrown);
+                    }
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <input id="mensaje" type="text" name="texto" placeholder="Introduce un texto" autofocus/>
+        <input type="button" value="Enviar" onclick="ajaxPost()"/>
+        <div id="enviado"></div>
+        <div id="recibido"></div>
+        <div id="contador"></div>
+    </body>
+</html>

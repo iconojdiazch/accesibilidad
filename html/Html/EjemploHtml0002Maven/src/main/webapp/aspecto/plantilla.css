@@ -1,0 +1,45 @@
+/* 
+    Document   : __NAME__
+    Created on : __DATE__, __TIME__
+    Author     : __USER__
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+.contenido {
+   background-color: gray;
+   color: white;
+   font-family: Geneva,Arial,Helvetica,sans-serif;
+   font-size: 14px
+}
+.navegacion {
+   background-color: yellow;
+   color: olive;
+   font-family: Verdana,Arial,Helvetica,sans-serif;
+   font-size: 12px;
+   letter-spacing: 2px
+}
+.cabecera {
+   text-align: center
+}
+.pie {
+   text-align: right
+}
+img.icon {
+   float: left;
+   padding-bottom: 20px;
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-top: 20px
+}
+P {
+margin-left: 15px;
+}

@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<TITLE>onsubmit</TITLE>
+<script type="text/javascript">
+<!--
+function abrir_dialogo(cadena) { 
+alert(cadena);
+}
+//-->
+</script>
+</HEAD>
+<BODY>
+<CENTER>
+  <H1>Ejemplo de onsubmit</H1>
+<HR width="90%">
+  <FORM method="post" action="mailto:triebjlr@netscape.net" ENCTYPE="TEXT/PLAIN" onsubmit="abrir_dialogo('Esta completamente seguro?')">
+    <P>Nombre: 
+      <INPUT type="text" name="nombre">
+    
+    <P>Comentarios sobre el tutorial:<BR>
+      <TEXTAREA name="comentarios"></TEXTAREA>
+    </P>
+    <P> 
+      <INPUT type="submit" name="Submit" value="Enviar">
+    </P>
+  </FORM>
+  <P>&nbsp;</P>
+</CENTER>
+</BODY>
+</HTML>
+
+
+

@@ -1,0 +1,114 @@
+.fondo {
+    background-image: url(../imagenes/bg_top.jpg);
+    background-repeat: no-repeat;
+}
+.principal {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bolder;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    margin-left: 40px;
+    margin-top: 50px;
+    color: #666666;
+}
+.titulo {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: oblique;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-left: 40px;
+    margin-top: 50px;
+    color: #333333;
+    font-variant: normal;
+    letter-spacing: 0.2em;
+    text-align: justify;
+}
+.entradilla {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 40px;
+    margin-top: 50px;
+    color: #990066;
+    font-variant: normal;
+    letter-spacing: 0.2em;
+    text-align: justify;
+    text-indent: 1cm;
+}
+
+div.left {
+    width: 50%;
+    text-align: Justify;
+    float: left;
+}
+div.right {
+    width: 40%;
+    text-align: Justify;
+    float: right;
+}
+img.izquierda{
+    float:left;
+}
+img.derecha{
+    float:right;
+}
+a:link{
+    color:#990000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+a:visited{
+    color:#996600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+a:active{
+    color:#CC6600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+P.grande:first-letter {
+    font-size: 36pt;
+    float: left;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #000000;
+}
+P.grande {
+    font-size: 18pt;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+    color: #CC9900;
+    letter-spacing: 0.4em;
+}
+P.mediano:first-letter {
+    font-size: 36pt;
+    float: left;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #000000;
+}
+P.mediano {
+    font-size: 18pt;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+    color: #CC9900;
+}
+.parrafo_principal {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: lighter;
+    letter-spacing: 0.1em;
+    text-align: justify;
+    word-spacing: 0.2em;
+    color: #666666;
+}

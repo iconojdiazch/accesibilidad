@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+        <head>
+        <title>SSE Simple</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        Tiempo: <span id="tiempo"></span>
+
+        <br><br>
+        <button onclick="comenzar()">Comenzar</button>
+
+        <script type="text/javascript">
+            function comenzar() {
+
+                var eventSource = new EventSource("SseSimple");
+
+                eventSource.onmessage = function (event) {
+                    document.getElementById('tiempo').innerHTML += event.data + "<br>";
+                };
+            }
+        </script>
+    </body>
+</html>

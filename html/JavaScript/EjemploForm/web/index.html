@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Ejemplo Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            #hueco, #hueco1, #hueco2{
+                color:red;
+                font-size: 150%;
+                font-family: "Tahoma";
+            }
+            #form, #form1, #form2{
+                text-align: center;
+            }
+            h3{
+                color: blue;
+            }
+        </style>
+        <script type="text/javascript">
+            function test() {
+                var texto = document.getElementById("texto").value;
+                var div = document.getElementById("hueco");
+                var patron = /^\w{3}/g;
+                var r = new RegExp(patron);
+                if (r.test(texto)) {
+                    div.innerHTML = "";
+                    return true;
+                } else {
+                    div.innerHTML = "El texto debe tener al menos tres caracteres";
+                    return false;
+                }
+            }
+            window.onload = function () {
+                document.getElementById("form1").addEventListener("submit",
+                        function (evento) {
+                            var texto = document.getElementById("texto1").value;
+                            var div = document.getElementById("hueco1");
+                            var patron = /^\w{3}/g;
+                            var r = new RegExp(patron);
+                            if (r.test(texto)) {
+                                div.innerHTML = "";
+                            } else {
+                                div.innerHTML = "El texto debe tener al menos tres caracteres";
+                                evento.preventDefault();
+                            }
+                        });
+                document.getElementById("form2").onsubmit = function (evento) {
+                    var texto = document.getElementById("texto2").value;
+                    var div = document.getElementById("hueco2");
+                    var patron = /^\w{3}/g;
+                    var r = new RegExp(patron);
+                    if (r.test(texto)) {
+                        div.innerHTML = "";
+                    } else {
+                        div.innerHTML = "El texto debe tener al menos tres caracteres";
+                        evento.preventDefault();
+                    }
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <h1>Activar consola JavaScript</h1>
+        <h3>Evemtos. Primera forma</h3>
+        <form id="form" action="EjemploServlet" onsubmit="return test()">
+            <label for="texto">Nombre</label>
+            <input type="text" name="texto" id="texto" placeholder="Introduzca un texto" autofocus/>
+            <input type="submit" value="Enviar"/>
+        </form>
+        <div id="hueco"></div>
+        <h3>Evemtos. Segunda forma</h3>
+        <form id="form1" action="EjemploServlet">
+            <label for="texto1">Nombre</label>
+            <input type="text" name="texto" id="texto1" placeholder="Introduzca un texto" autofocus/>
+            <input type="submit" value="Enviar"/>
+        </form>
+        <div id="hueco1"></div>
+        <h3>Evemtos. Tercera forma</h3>
+        <form id="form2" action="EjemploServlet">
+            <label for="texto">Nombre</label>
+            <input type="text" name="texto" id="texto2" placeholder="Introduzca un texto" autofocus/>
+            <input type="submit" value="Enviar"/>
+        </form>
+        <div id="hueco2"></div>        
+    </body>
+</html>

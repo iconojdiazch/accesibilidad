@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<TITLE>onmouseup</TITLE>
+<script type="text/javascript">
+<!--
+function abrir_dialogo(cadena) { 
+  alert(cadena);
+}
+//-->
+</script>
+</HEAD>
+
+<BODY >
+<CENTER>
+  <H1>Ejemplo de onmouseup</H1>
+<HR width="90%">
+  <P>Den click en el cuadro 1 y sin soltar el boton del mouse vayan al 2, ahi 
+    suelten el boton</P>
+  <form action="">
+<P> 
+    <TEXTAREA name="textfield">1</TEXTAREA>
+    <TEXTAREA name="textfield2" onmouseup="abrir_dialogo('Hola Mundo')">2</TEXTAREA>
+  </P>
+</form>
+  </CENTER>
+
+</BODY>
+</HTML>
+

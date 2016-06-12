@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <title>Aplicaci&oacute;n de comportamientos jQuery</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css">
+            @import url("styles.css");
+        </style>
+        <script type="text/javascript" src="js/jquery-1.2.6.js"></script>
+        <script type="text/javascript" src="js/ui.core.js"></script>
+        <script type="text/javascript" src="js/ui.accordion.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.js"></script>
+        <script type="text/javascript" src="js/defuscator.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#infolist").accordion({
+                    header: '.personName',
+                    animated: 'easeslide',
+                    navigation: false
+                });
+                $(".email").defuscate();
+            });
+        </script>
+    </head>
+    <body>
+        <ul id="infolist">
+            <li>
+                <a class="personName" href="#">Mary Adams</a>
+                <div class="person">
+                    <ul>
+                        <li class="portrait">
+                            <img src="pix/maryadams.jpg" alt="Mary Adams">
+                        </li>
+                        <li class="title">Vice President</li>
+                        <li class="office">102 Bldg 1</li>
+                        <li class="phone">4 8234</li>
+                        <li class="email">mary.adams(at)company.com</li>
+                        <li class="bio">
+                            Neque porro quisquam est, qui dolorem ipsumquia
+                            dolor sit amet, consectetur, adipisci velit, sed
+                            quia non numquam eius modi tempora incidunt ut
+                            labore et magnam aliquam quaerat voluptatem. Ut
+                            enim ad minima veniam, quis nostrum exercitationem
+                            ullam corporis suscipit laboriosam, nisi ut aliquid
+                            ex ea commodi consequatur? Quis autem vel eum iure
+                            reprehenderit qui in ea voluptate velit esse quam
+                            nihil molestiae consequatur, vel illum qui dolorem
+                            eum fugiat quo voluptas nulla pariatur?
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <a class="personName" href="#">John Matthews</a>
+                <div class="person">
+                    <ul>
+                        <li class="portrait">
+                            <img src="pix/johnmatthews.jpg" alt="John Matthews">
+                        </li>
+                        <li class="title">Middle Manager</li>
+                        <li class="office">307 Bldg 1</li>
+                        <li class="phone">4 3082</li>
+                        <li class="email">john.matthews(at)company.com</li>
+                        <li class="bio">
+                            Sed ut perspiciatis unde omnis iste natus error sit
+                            voluptatem accusantium doloremque laudantium, totam
+                            rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                            et quasi architecto beatae vitae dicta sunt explicabo. Nemo
+                            enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                            aut fugit, sed quia consequuntur magni dolores eos qui
+                            ratione voluptatem sequi nesciunt.
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <a class="personName" href="#">Sam Jackson</a>
+                <div class="person">
+                    <ul>
+                        <li class="portrait">
+                            <img src="pix/samjackson.jpg" alt="Sam Jackson">
+                        </li>
+                        <li class="title">Deputy Assistant</li>
+                        <li class="office">457 Bldg 1</li>
+                        <li class="phone">4 3494</li>
+                        <li class="email">sam.jackson(at)company.com</li>
+                        <li class="bio">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                            do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <a class="personName" href="#">Jenifer Applethwaite</a>
+                <div class="person">
+                    <ul>
+                        <li class="portrait">
+                            <img src="pix/jeniferapplethwaite.jpg" alt="Jenifer Applethwaite">
+                        </li>
+                        <li class="title">Senior Technician</li>
+                        <li class="office">327 Bldg 1</li>
+                        <li class="phone">4 9430</li>
+                        <li class="email">jenifer.applethwaite(at)company.com</li>
+                        <li class="bio">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt
+                            mollit anim id est laborum.
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </body>
+</html>

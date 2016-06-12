@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo Query Selector</title>
+        <style type="text/css">
+            td 
+            {
+                border-style: solid;
+                border-width: 1px;
+                font-size: 300%;
+            }
+            td:hover 
+            {
+                background-color: cyan;
+            }
+            #etiqueta
+            {
+                color: green;
+                font-size: 200%;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <table>
+                <tr>
+                    <td>A1</td> <td>A2</td> <td>A3</td>
+                </tr>
+                <tr>
+                    <td>B1</td> <td>B2</td> <td>B3</td>
+                </tr>
+                <tr>
+                    <td>C1</td> <td>C2</td> <td>C3</td>
+                </tr>
+            </table>
+            <div>Una vez el bot&oacute;n tenga el foco, pon el rat&oacute;n sobre una celda y pulsa Enter.
+                Usando el m&eacute;todo querySelector('td:hover') se muestra el texto de la celda.</div>
+            <button type="button" id="miboton" autofocus>Buscar 'td:hover' seleccionado</button>
+            <div id="etiqueta"></div>
+            <script type="text/javascript">
+                document.getElementById("miboton").onclick = function ()
+                {
+                    // Busca la celda de la tabla seleccionada (hover) con querySelector
+                    document.getElementById("etiqueta").innerHTML = document.querySelector("td:hover").innerHTML;
+                }
+            </script>
+        </form>
+    </body>
+</html>

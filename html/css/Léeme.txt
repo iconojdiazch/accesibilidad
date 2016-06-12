@@ -1,0 +1,7 @@
+EjemploCss0001: Uso simple de divs, hojas de estilo y tablas
+EjemploCss0002: Uso más complejo de hojas de estilo
+EjemploCss0003:
+	Comparación Html-Css. Hojas de estilo externas, internas y en línea. Uso de selectores. Ejemplo de árbol DOM. Herencia.
+	Selectores dirigidos por atributos. Pseudoclases. Ejemplos de organización y estructura.
+EjemploCss0004: uso del posicionamiento en css
+EjemploCss0005: Uso de divs y css para dar estructura a una página

@@ -1,0 +1,38 @@
+body {
+    font-size:80%;
+    font-family:'Lucida Grande',Verdana,sans-serif;
+    margin:10px;
+    background-color:#CCCCCC;
+}
+#container {
+    width:400px;
+    height:400px;
+    margin:10px;
+    padding:10px;
+    border:1px solid #000000;
+    background-color:#FFFFFF;
+}
+.image_float {
+    float:left;
+    margin:0 5px 5px 0;
+}
+h1 {
+    font-size:150%;
+}
+h2 {
+    font-size:140%;
+}
+h3 {
+    clear:left;
+    padding-top:20px;
+    font-size:120%;
+}
+p {
+    font-size:100%;
+    line-height:150%;
+}
+
+img {
+    position:relative;
+    left:400px;
+}

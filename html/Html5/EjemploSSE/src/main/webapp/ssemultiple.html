@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+        <head>
+            <title>SSE M&uacute;ltiple</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        Votos Positivos: <span id="si"></span>
+        Votos Negativos: <span id="no"></span>
+        <br><br>
+        <button onclick="comenzar()">Comenzar</button>
+
+        <script type="text/javascript">
+            function comenzar() {
+
+                var eventSource = new EventSource("SseMultiple");
+
+
+                eventSource.addEventListener('voto_si', function (event) {
+
+                    document.getElementById('si').innerHTML = event.data;
+
+                }, false);
+
+
+                eventSource.addEventListener('voto_no', function (event) {
+
+                    document.getElementById('no').innerHTML = event.data;
+
+                }, false);
+            }
+        </script>
+    </body>
+</html>

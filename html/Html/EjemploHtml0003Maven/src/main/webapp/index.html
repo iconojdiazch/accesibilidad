@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Campos de formulario Html</h1>
+        <form name="unFormulario" action="FormularioServlet" method="POST">
+            <table border="0" width="100%" cellspacing="2" cellpadding="2">
+                <tr>
+                    <td>Campo de texto:</td>
+                    <td colspan="2"> <input type="text" name="campoTexto" value="" size="20" /></td>
+                </tr>
+                <tr>
+                    <td>Campo de texto para introducir claves:</td>
+                    <td colspan="2"> <input type="password" name="campoClave" value="" size="20" /> </td>
+                </tr>
+                <tr>
+                    <td>Campo de texto multil&iacute;nea:</td>
+                    <td colspan="2">
+                        <textarea name="campoMulti" rows="4" cols="20">
+                           
+                        </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="check1" value="chkUno" />Check box 1</td>
+                    <td><input type="checkbox" name="check2" value="chkDos" />Check box 2</td>
+                    <td><input type="checkbox" name="check3" value="chkTres" checked/>Check box 3</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="grupoUno" value="radioUno" checked/>Radio 1</td>
+                    <td><input type="radio" name="grupoUno" value="radioDos" />  Radio 2</td>
+                    <td><input type="radio" name="grupoUno" value="radioTres" /> Radio 3</td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="lista1">
+                            <option value="op1">Opci&oacute;n 1</option>
+                            <option value="op2">Opci&oacute;n 2</option>
+                            <option value="op3" selected>Opci&oacute;n 3</option>
+                            <option value="op4">Opci&oacute;n 4</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="lista2" size="4" multiple>
+                            <option value="op1">Opci&oacute;n 1</option>
+                            <option value="op2">Opci&oacute;n 2</option>
+                            <option value="op3">Opci&oacute;n 3</option>
+                            <option value="op4">Opci&oacute;n 4</option>
+                            <option value="op5">Opci&oacute;n 5</option>
+                            <option value="op6">Opci&oacute;n 6</option>
+                            <option value="op7">Opci&oacute;n 7</option>
+                            <option value="op8">Opci&oacute;n 8</option>
+                        </select>
+                    </td>
+                    <td>
+                        <SELECT name="lista3" multiple size="8">
+                            <OPTGROUP label="Ice Cream">
+                                <OPTION>Chocolate
+                                <OPTION>Vanilla
+                                <OPTION>Strawberry
+                                <OPTION>Chocolate Chip
+                                <OPTION>Mint Chip
+                                <OPTION>Cookie Dough
+                                <OPTION>Peanut Butter and Chocolate
+                            </OPTGROUP>
+                            <OPTGROUP label=”Sorbet”>
+                                <OPTION>Raspberry
+                                <OPTION>Lemon
+                                <OPTION>Lime
+                            </OPTGROUP>
+                            <OPTGROUP label="Frozen Yogurt">
+                                      <OPTION>Vanilla
+                                <OPTION>Chocolate
+                                <OPTION>Peanut Butter
+                                <OPTION>Raspberry
+                            </OPTGROUP>
+                        </SELECT>
+                    </td>
+                </tr>
+            </table>
+            <table border="0" style="width: 100%" cellspacing="2" cellpadding="2">
+                <tr>
+                    <td><input type="submit" value="Enviar" name="btnEnviar" /></td>
+                    <td> <input type="image" src="imagenes/tutorialhtml.jpg" alt="Tutorial"/></td>
+                    <td> <button type="submit">Enviar los datos del formulario</button></td>
+                    <td><input type="reset" value="Limpiar" name="btnLimpiar" /></td>
+                </tr>
+            </table>
+        </form>
+        <a href="pagina001.html">Ir a la otra p&aacute;gina</a>
+    </body>
+</html>

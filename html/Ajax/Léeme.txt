@@ -1,0 +1,5 @@
+EjemploAjax0001: Uso básico de Ajax con XMLHttpRequest.
+EjemploAjax0002: Ejemplo de acceso a una base de datos simulado con Prototype.
+EjemploAjax0003: Actualización dinámica bajo demanda de un elemento de una página Html con Prototype.
+EjemploAjax0004: Actualización dinámica periódica de un elemento de una página Html con Prototype.
+EjemploPost: Post con JQuery y AJAX

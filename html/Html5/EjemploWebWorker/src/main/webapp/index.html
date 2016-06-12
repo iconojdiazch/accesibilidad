@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo Web Worker</title>
+    </head>
+    <body>
+
+        <p>N&uacute;meros: <output id="resultado"></output></p>
+        <button onclick="arrancarWorker()">Arrancar Worker</button> 
+        <button onclick="pararWorker()">Parar Worker</button>
+        <br><br>
+
+        <script>
+            var w;
+
+            function arrancarWorker()
+            {
+                if (typeof (Worker) !== "undefined")
+                {
+                    if (typeof (w) === "undefined")
+                    {
+                        w = new Worker("workers.js");
+                    }
+                    w.onmessage = function (event) {
+                        document.getElementById("resultado").innerHTML = event.data;
+                    };
+                }
+                else
+                {
+                    document.getElementById("resultado").innerHTML = "El navegador no soporta Web Workers...";
+                }
+            }
+
+            function pararWorker()
+            {
+                w.terminate();
+            }
+        </script>
+
+    </body>
+</html>
+

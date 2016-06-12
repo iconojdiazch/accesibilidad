@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Canvas 2</title>
+        <style>
+            Canvas 
+            {
+                border: 1px solid #000000;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = function () {
+                var canvas = document.getElementById("cv");
+                var context = canvas.getContext("2d");
+
+                context.lineWidth = 1.5;  // establece el ancho del pincel
+                context.strokeStyle = "black"; // establece el color del pincel
+                // podemos crear un path en el que al cerrarlo el primer punto coincide con el ultimo
+                context.beginPath();
+                context.moveTo(0, 0);
+                context.lineTo(50, 100);
+                context.lineTo(250, 150);
+                context.lineTo(250, 100);
+                context.closePath(); // cerramos el path
+                context.stroke();
+
+                // creamos una imagen en un objeto de javascript
+                var imagen = new Image();
+                imagen.src = "nbalive.jpg";
+                // dibujo la imagen sobre el canvas
+                context.drawImage(imagen, 150, 250, 90, 50);
+                // puedo dibujar una imagen que esta ya construida como etiqueta HTML
+                context.drawImage(imagen2, 250, 250, 90, 50);
+
+                // podemos dibujar textos con fillText()
+                // Usamos una fuente impact de 30 pixeles
+                context.font = "30px impact";
+                context.fillStyle = "#996600";
+                context.textAlign = "center";
+                context.fillText("HTML5 canvas", 300, 50, 200);
+                // el segundo y tercer parametro son las coordenadas x e y
+                // el tercer parametro es el tama�o del texto (ancho)
+            };
+
+        </script>
+    </head>
+    <body>
+        <canvas id="cv" width="500" height="300"></canvas>
+        <img id="imagen2" src="middleearth.jpg" alt="no se encuentra" />
+        <img id="imagen3" src="nbalive.jpg" alt="no se encuentra" />
+    </body>
+</html>

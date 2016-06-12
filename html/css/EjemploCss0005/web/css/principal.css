@@ -1,0 +1,68 @@
+html{
+    margin:0px;
+    padding:0px
+}
+
+body{
+    color:black;
+    font-family:Verdana, Arial,Helvetica,sans-serif;
+    background:white;
+    text-align:center
+}
+
+.pagina{
+    width:800px;
+    height:100%;
+    border:1px solid #cccccc;
+    margin:auto;
+    text-align:left
+}
+.cabecera{
+    width:100%;
+    border:1px solid #aaaaaa;
+    margin:0px 0px 5px 0px
+}
+
+.horizontal{
+    clear:both;
+    width:100%;
+    border:1px solid #aaaaaa;
+    margin:0px 0px 5px 0px
+}
+.izquierdo{
+    width:29%;
+    border:1px solid #aaaaaa;
+    float:left;
+    margin:0px 0px 5px 0px
+}
+.centro{
+    width:69%;
+    border:1px solid #aaaaaa;
+    float:right;
+    margin:0px 1px 5px 0px
+}
+
+.izquierdo_tres{
+    width:14%;
+    border:1px solid #aaaaaa;
+    float:left;
+    margin:0px 1px 5px 0px
+}
+.derecho_tres{
+    width:14%;
+    border:1px solid #aaaaaa;
+    float:right;
+    margin:0px 0px 5px 1px
+}
+
+.centro_tres{
+    float:left;
+    width:70%;
+    border:1px solid #aaaaaa;
+    margin:0px 1px 5px 1px
+}
+.pie{
+    clear:both;
+    width:100%;
+    border:1px solid #aaaaaa;
+}

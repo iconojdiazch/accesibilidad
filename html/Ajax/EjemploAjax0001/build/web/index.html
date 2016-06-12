@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            var servidorURL = "AjaxServlet?mensaje=";
+            var http = getObjetoHTTP(); 
+
+            function gestionarRespuestaHttp() {
+                if (http.readyState == 4) {
+                    var lista = document.getElementById("lista");
+                    nuevoNodo(lista, http.responseText);
+                }
+            }
+
+            function llamadaAjax() {
+                http.open("GET", servidorURL + escape(document.getElementById("mensajeId").value), true);
+                http.onreadystatechange = gestionarRespuestaHttp;
+                http.send(null);
+            }
+
+            function getObjetoHTTP() {
+                var xmlhttp;
+                try {
+                    xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+                } catch (e) {
+                    try {
+                        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                    } catch (E) {
+                        xmlhttp = false;
+                    }
+                }
+
+                if (!xmlhttp && typeof XMLHttpRequest != 'undefined') {
+                    try {
+                        xmlhttp = new XMLHttpRequest();
+                    } catch (e) {
+                        xmlhttp = false;
+                    }
+                }
+
+                return xmlhttp;
+            }
+            
+            function nuevoNodo(elemento,texto){
+                var descendiente=document.createElement("li");
+                elemento.appendChild(descendiente);
+                var nodoTexto=document.createTextNode(texto);
+                descendiente.appendChild(nodoTexto);
+            }
+        </script>
+    </head>
+    <body>
+        Mensaje: <input type="text" name="texto" id="mensajeId" onkeyup="llamadaAjax()"/>
+        <br>Respuestas<ul id="lista"></ul>
+    </body>
+</html>

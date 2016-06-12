@@ -1,0 +1,51 @@
+body { width: 40em; margin: auto; }
+a { outline: none; }
+
+.ui-accordion {
+    margin: 0; padding: 0;
+}
+.ui-accordion li {
+    list-style-type: none;
+    border-bottom: 2px solid white;
+}
+.ui-accordion li .ui-accordion-header {
+    margin: 0; padding: 0 1em;
+    font: bold 14px/28px sans-serif;
+    color: #eef;
+    background-color: #aaf;
+    text-decoration: none;
+    display: block;
+}
+
+a.personName:hover { color: white; }
+ul.infolist { display: block; }
+
+.person {
+    background-color: #eef;
+    margin: 0; padding: 0;
+    border-bottom: 1px solid #ccf;
+}
+.person ul { padding: 0 3em 2em; }
+.person ul li {
+    padding-top: 1em;
+    border: 0 none;
+}
+
+li:before {
+    color: #66f;
+    font-weight: bold;
+    display: inline-block;
+    width: 4.5em;
+}
+
+li.portrait img {
+    float: right;
+    margin: 1em;
+    border: 1px solid #ccf;
+}
+li.title:before { content: "Title: "; }
+li.office:before { content: "Office: "; }
+li.phone:before { content: "Phone: "; }
+li.email:before { content: "E-mail: "; }
+li.bio:before { content: "Bio: "; }
+

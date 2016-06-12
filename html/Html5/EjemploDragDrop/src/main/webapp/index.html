@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Ejemplo Drag Drop</title>
+        <style type="text/css">
+            .a 
+            {
+                width:200px;
+                height:300px;
+                padding:10px;
+                border:1px solid #aaaaaa;
+            }
+        </style>
+        <script type="text/javascript">
+            function arrastra(e)
+            {
+                /* en el primer parametro indicamos el tipo de lo que arrastramos */
+                /* en el segundo parametro indicamos lo que queremos coger */
+                /* en este caso 'imagen1' que se lo hemos pasado como parametro al metodo asociado al evento */
+                /* en este caso e.target es la imagen */
+                e.dataTransfer.setData("Imagen", e.target.id);
+            }
+            function suelta(e)
+            {
+                /* almacenamos en una variable el contenido arrastrado */
+                var contenido = e.dataTransfer.getData("Imagen");
+                /* en este caso e.target es la seccion div */
+                /* añadimos a  la seccion div la imagen arrastrada */
+                e.target.appendChild(document.getElementById(contenido));
+                /* obligatorio para evitar que el navegador actue por defecto*/
+                e.preventDefault();
+            }
+            function permitesoltar(e)
+            {
+                e.preventDefault(); /* obligatorio para evitar que el navegador actue por defecto*/
+
+            }
+        </script>
+    </head>
+    <body>
+        <div class="a" ondrop="suelta(event)" ondragover="permitesoltar(event)">Arrastrar y soltar la imagen aqu&iacute;</div>
+        <br />
+        <!-- con draggable hacemos que un elemento sea arrastrable -->
+        <img alt="Arrastrar y soltar" id="imagen1" src="gato.jpg" draggable="true" ondragstart="arrastra(event)" width="150" height="250" />
+    </body>
+</html>

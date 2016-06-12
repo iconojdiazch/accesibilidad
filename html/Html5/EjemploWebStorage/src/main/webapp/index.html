@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo Web Storage</title>
+    </head>
+    <body>
+
+        Nombre: <input type="text" id="caja_nombre" /> se guarda en "Local Storage". Es permanente <br>
+        Apellido: <input type="text" id="caja_apellido" /> se guarda en "Sesi&oacute;n Storage". Es temporal <br>
+        <button id="boton">Guardar</button>
+        <hr />
+        <div id="n"></div>
+        <div id="a"></div>
+
+        <script type="text/javascript">
+
+            window.onload = function ()
+            {
+                alert(localStorage.getItem('codigopostal'));
+                document.getElementById("n").innerHTML = "Nombre " + localStorage.nombre;
+                document.getElementById("a").innerHTML = "Apellido " + sessionStorage.apellido;
+            }
+
+            document.getElementById("boton").onclick = function ()
+            {
+                // el objeto localStorage permite almacenar contenido (similar a las cookies)
+                // en el lado cliente de forma permanente (aunque se cierre la sesion)
+                // comparativamente con el uso de cookies tiene mejor rendimiento y permite
+                // contenidos mas grandes
+                // la forma de introducir el contenido el mediante parejas clave-valor
+                // en este caso la clave es 'nombre' y el valor lo que introduzcamos en la caja
+                localStorage.nombre = document.getElementById("caja_nombre").value;
+                document.getElementById("n").innerHTML = "Nombre " + localStorage.nombre;
+
+                // el objeto SessionStorage es similar pero almacena el contenido solo por sesion
+                // al cerrar la sesion se pierde el contenido
+                sessionStorage.apellido = document.getElementById("caja_apellido").value;
+                document.getElementById("a").innerHTML = "Apellido " + sessionStorage.apellido;
+
+                // tenemos tambien los metodos setItem() y getItem() para escribir o leer las
+                // parejas clave-valor
+                localStorage.setItem('codigopostal', '28036');
+
+                // tambien tenemos el metodo removeItem(clave) para eliminar una pareja y clear() para todas
+            };
+
+        </script>
+
+    </body>
+</html>
+

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Canvas 4</title>
+        <script type="text/javascript">
+
+            var img = new Image();
+
+            function animacion() {
+                img.src = "helicoptero.jpg";
+                // cada segundo se ejecuta la funcion dibujar()
+                setInterval(dibujar, 1000);
+            }
+
+            function dibujar() {
+                var canvas = document.getElementById('lienzo');
+                var ctx = canvas.getContext('2d');
+                ctx.save();
+                ctx.translate(150, 150);  // trasladado hacia la zona visible para que al ir girando 
+                // no se se mueva en parte no visible
+                var time = new Date();
+                // la figura va rotando con un angulo que depende de los segundos de la hora actual
+                ctx.rotate(((Math.PI) / 6) * time.getSeconds());
+                ctx.drawImage(img, 0, 0);
+                ctx.restore();
+            }
+
+            function gradiente() {
+                var canvas = document.getElementById('lienzo');
+                var ctx = canvas.getContext('2d');
+
+                // creacion del gradiente (en este caso gradiente lineal)
+                // (con createLinearGradient creariamos un gradiente radial )
+                var lineal = ctx.createLinearGradient(0, 0, 0, 100);
+                // asi seria el gradiente en vertical (0,0,100,0)
+                lineal.addColorStop(0.1, '#00AADD');
+                lineal.addColorStop(0.5, '#CCCCFF');
+                lineal.addColorStop(0.8, '#DDEEFF');
+
+                ctx.fillStyle = lineal;
+                ctx.fillRect(0, 0, 300, 300); // (x,y,ancho,alto)
+            }
+        </script>
+    </head>
+
+    <body onload="animacion();
+            gradiente()">
+        <canvas id="lienzo" width="400" height="400"></canvas>
+    </body>
+
+</html>

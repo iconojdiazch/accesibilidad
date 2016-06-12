@@ -1,0 +1,38 @@
+<!-- 
+    Document   : ProcesarFormulario
+    Created on : 16-jun-2008, 22:34:05
+    Author     : Chema
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        La URL de esta p&aacute;gina es:&nbsp;
+        <b>
+            <script type="text/javascript">
+                document.write(document.URL);
+            </script>
+        </b>
+        <br>Los par&aacute;metros enviados por el cliente son:&nbsp;
+        <script type="text/javascript">
+            var posicion = document.URL.indexOf("?");
+            if(posicion == -1){
+                document.write("No se han encontrado parámetros");
+            }else{
+                var parametros = document.URL.substring(posicion+1,document.URL.length);
+                parametros = parametros.replace("+", " ");
+                document.write("<font size=+2>"+parametros+"</font>");
+                document.write("<br><b>Lista de parámetros, organizados por nombre y valor</b>");
+                var pares = parametros.split("&");
+                document.write("<ul>");
+                for(var i = 0; i < pares.length; i++){
+                    document.write("<li>" + pares[i] + "</li>");
+                }
+                document.write("</ul>");
+            }
+        </script>
+    </body>
+</html>

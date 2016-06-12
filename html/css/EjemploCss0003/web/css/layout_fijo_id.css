@@ -1,0 +1,45 @@
+#invertir #sidebar_a {
+    float:right;
+}
+#invertir #sidebar_b {
+    float:left;
+}
+#dosCol #sidebar_b{
+    display:none;
+}
+#dosCol #content{
+    margin-right:0;
+}
+#masthead {
+    margin:0 0 10px 0;
+    padding:10px;
+    border:1px solid #000;
+    background-color:#CCC;
+}
+#content {
+    margin-left:30%;
+    margin-right:30%;
+    margin-bottom:10px;
+    padding:10px;
+    border:1px solid #000;
+}
+#sidebar_a {
+    float:left;
+    width:25%;
+    margin-bottom:10px;
+    padding:10px;
+    border:1px solid #000;
+}
+#sidebar_b {
+    float:right;
+    width:25%;
+    margin-bottom:10px;
+    padding:10px;
+    border:1px solid #000;
+}
+#footer {
+    clear:both;
+    padding:10px;
+    border:1px solid #000;
+    background-color:#CCC;
+}

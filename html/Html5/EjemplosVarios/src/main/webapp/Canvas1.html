@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Canvas 1</title>
+        <style>
+            Canvas 
+            {
+                border: 1px solid #000000;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = function ()
+            {
+                var canvas = document.getElementById("cv");
+                var context = canvas.getContext("2d");
+                context.lineWidth = 1.5;  // establece el ancho del pincel
+                context.strokeStyle = "#FF0000"; // establece el color del pincel
+                context.moveTo(100, 25); // empieza a dibujar a partir de estas coordenadas
+                context.lineTo(200, 50); // dibuja una linea hasta estas coordenadas
+                context.stroke();  // para ejecutar el dibujo 
+                context.lineTo(200, 100);
+                context.stroke();
+
+                var canvas2 = document.getElementById("cv2");
+                var context2 = canvas2.getContext("2d");
+                var x = canvas2.width / 2;
+                var y = canvas2.height / 2;
+                var radius = 75;
+                var startAngle = 0.5 * Math.PI;
+                var endAngle = 1.5 * Math.PI;
+                var counterClockwise = true; // va contra las agujas del reloj
+                context.strokeStyle = "black";
+                // dibujamos un arco
+                context2.arc(x, y, radius, startAngle, endAngle, counterClockwise);
+                context2.stroke();
+
+                var canvas3 = document.getElementById("cv3");
+                var context3 = canvas3.getContext("2d");
+                // dibujamos un rectangulo
+                context3.rect(0, 50, 250, 70);
+                // podemos rellenar figuras cerradas
+                context3.fillStyle = 'yellow';
+                context3.fill();
+                context3.stroke();
+
+                // tambien tenemos drawImage para incluir imagenes
+                // y fillText para incluir textos
+            };
+
+        </script>
+    </head>
+    <body>
+        <canvas id="cv" width="400" height="200"></canvas>
+        <canvas id="cv2" width="400" height="200"></canvas>
+        <canvas id="cv3" width="400" height="200"></canvas>
+    </body>
+</html>
