@@ -3,6 +3,17 @@
     <head>
         <title>Start Page</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            li:before{
+                content: "Antes"
+            }
+            li:after{
+                content:"Después"
+            }
+            a[href]:after{
+                content: "(" attr(href) ")"
+            }
+        </style>
     </head>
     <body>
         <h1>Lista de p&aacute;ginas</h1>
