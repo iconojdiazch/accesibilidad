@@ -14,9 +14,37 @@
                 content: "(" attr(href) ")"
             }
         </style>
+        <style>
+            .crimson{
+                color: crimson
+            }
+            .rojo:before {
+                content: attr(data-attr);
+                color: red;
+            }
+        </style>
+        <script>
+            window.onload = function () {
+                var n = document.getElementById("uno");
+                n.addEventListener(
+                        "click",
+                        function () {
+                            n.setAttribute("data-attr", "verde");
+                        }
+                );
+                var n1 = document.getElementById("dos");
+                n1.addEventListener(
+                        "mouseover",
+                        function () {
+                            n1.className = 'crimson';
+                        }
+                );
+            };
+        </script>
     </head>
     <body>
-        <h1>Lista de p&aacute;ginas</h1>
+        <p id="uno" class="rojo" data-attr="rojo">Un texto cualquiera en un párrafo.</p>
+        <h1 id="dos">Lista de p&aacute;ginas</h1>
         <ul>
             <li>
                 <a href="html/PaginaVacia.html">P&aacute;gina Vac&iacute;a</a>
