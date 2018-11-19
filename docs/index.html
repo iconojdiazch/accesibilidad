@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+       "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="keywords" content="W3C, Gira, estándar, Web, Consorcio, Oficina española, W3, tecnología, divulgación, autobús, premio, accesibilidad, gira estándares w3c, accesibilidad Web, WAI, WCAG, Web Accessibility Initiative, Iniciativa de Accesibilidad Web, Pautas de Accesibilidad al Contenido en la Web, Web Content Accessibility Guidelines, punto de verificación, verificación, prioridad, Prioridad 1, Prioridad 2, Prioridad 3, Nivel de Conformidad A, Nivel de Conformidad Doble A, Nivel de Conformidad Triple A, pautas, Técnicas esenciales para Pautas de Accesibilidad al Contenido en la Web 1.0, técnicas"/>
+		<meta name="description" content="El W3C trabaja constantemente en la expansión del acceso a la Web, asegurando que sus tecnologías promuevan la accesibilidad a través del desarrollo de pautas de accesibilidad Web, llevando a cabo una labor educativa y de concienciación en relación a la importancia del diseño accesible de páginas Web y abriendo nuevos campos en accesibilidad a través de la investigación en este área.  Hablar de Accesibilidad Web es hablar de un acceso universal a la Web, independientemente del tipo de hardware, software, infraestructura de red, idioma, cultura, localización geográfica y capacidades de los usuarios."/>
+		<title>Guía Breve de Accesibilidad Web</title>
+		<link rel="contents" href="index.html.es" title="índice de las Guias"/>
+		<link rel="stylesheet" type="text/css" href="./css/guias.css"/>
+		<link rel="stylesheet" type="text/css" media="print" href="./css/print.css"/>
+	</head>
+	<body>
+		<div id="breadcrumbs">
+Estás en:
+<ul>
+				<li>
+					<a href="/" title="Sitio Web de la Oficina Española del W3C">Oficina Española</a>
+					<ul>
+                        <li>&#187; <a href="/Divulgacion" title="Información y documentos divulgativos">Documentos y Guías</a>
+        					<ul>
+        						<li>&#187; <a href="/Divulgacion/GuiasBreves/" title="índice de las Guias Breves de Tecnolog�as W3C">Guias Breves</a>
+        							<ul>
+        								<li>&#187; <span class="currentPage">Accesibilidad</span>
+        								</li>
+        							</ul>
+        						</li>
+        					</ul>
+        				</li>
+        			</ul>
+				</li>
+			</ul>
+		</div>
+		<?php include("inc/cabecera.inc.php")?>
+		<h1 id="inicio">Guía Breve de Accesibilidad Web</h1>
+		<?php include("inc/menu.inc.php")?>
+		<h2 id="intro">¿Qué es la Accesibilidad Web?</h2>
+		<p class="invisible">
+			<a title="Ir directamente al uso" href="#uso">Saltar Introducción.</a>
+		</p>
+		<p>Hablar de <em>Accesibilidad Web</em> es hablar de un acceso universal a la Web, independientemente del tipo de hardware, software, infraestructura de red, idioma, cultura, localización geográfica y capacidades de los usuarios.</p>
+		<p>Con esta idea de accesibilidad nace la <a href="http://w3.org/WAI/" hreflang="en">Iniciativa de Accesibilidad Web</a>, conocida como WAI (<span xml:lang="en-us">Web Accessibility Initiative</span>). Se trata de una actividad desarrollada por el <acronym title="World Wide Web Consortium" xml:lang="en">W3C</acronym>, cuyo objetivo es facilitar el acceso de las personas con discapacidad, desarrollando pautas de accesibilidad, mejorando las herramientas para la evaluación y reparación de accesibilidad Web, llevando a cabo una labor educativa y de concienciación en relación a la importancia del diseñoo accesible de páginas Web, y abriendo nuevos campos en accesibilidad a través de la investigación en este área.</p>
+		<h2 id="uso">¿Para qué sirve?</h2>
+		<p class="invisible">
+			<a title="Ir directamente al funcionamiento" href="#funcionamiento">Saltar Uso.</a>
+		</p>
+		<p>La idea principal radica en hacer la Web m�s accesible para todos los usuarios independientemente de las circunstancias y los dispositivos involucrados a la hora de acceder a la informaci�n. Partiendo de esta idea, una p�gina accesible lo ser�a tanto para una persona con discapacidad, como para cualquier otra persona que se encuentre bajo circunstancias externas que dificulten su acceso a la informaci�n (en caso de ruidos externos, en situaciones donde nuestra atenci�n visual y auditiva no est�n disponibles, pantallas con visibilidad reducida, etc.).
+</p>
+		<h2 id="funcionamiento">�C�mo funciona?</h2>
+		<p class="invisible">
+			<a title="Ir directamente a los ejemplos" href="#ejemplo">Saltar Funcionamiento.</a>
+		</p>
+		<p>Para hacer el contenido Web accesible, se han desarrollado las denominadas <a href="http://www.w3.org/TR/WCAG10/" hreflang="en">Pautas de Accesibilidad al Contenido en la Web</a> (<acronym title="Web Content Accessibility Guidelines">WCAG</acronym>), cuya funci�n principal es guiar el dise�o de p�ginas Web hacia un dise�o accesible, reduciendo de esta forma barreras a la informaci�n. WCAG consiste en 14 pautas que proporcionan soluciones de dise�o y que utilizan como ejemplo situaciones comunes en las que el dise�o de una p�gina puede producir problemas de acceso a la informaci�n. Las Pautas contienen adem�s una serie de puntos de verificaci�n que ayudan a detectar posibles errores.</p>
+		<p>Cada punto de verificaci�n est� asignado a uno de los tres niveles de prioridad establecidos por las pautas.</p>
+		<ul>
+			<li>
+				<strong>Prioridad 1:</strong> son aquellos puntos que un desarrollador Web tiene que cumplir ya que, de otra manera, ciertos grupos de usuarios <strong>no podr�an acceder</strong> a la informaci�n del sitio Web.</li>
+			<li>
+				<strong>Prioridad 2:</strong> son aquellos puntos que un desarrollador Web deber�a cumplir ya que, si no fuese as�, ser�a <strong>muy dif�cil acceder</strong> a la informaci�n para ciertos grupos de usuarios.</li>
+			<li>
+				<strong>Prioridad 3:</strong> son aquellos puntos que un desarrollador Web deber�a cumplir ya que, de otra forma, algunos usuarios experimentar�an <strong>ciertas dificultades para acceder</strong> a la informaci�n.</li>
+		</ul>
+		<p>En funci�n a estos puntos de verificaci�n se establecen los niveles de conformidad:</p>
+		<ul>
+			<li>
+				<strong>Nivel de Conformidad "A":</strong> todos los puntos de verificaci�n de prioridad 1 se satisfacen.</li>
+			<li>
+				<strong>Nivel de Conformidad "Doble A":</strong> todos los puntos de verificaci�n de prioridad 1 y 2 se satisfacen.</li>
+			<li>
+				<strong>Nivel de Conformidad "Triple A": </strong> todos los puntos de verificaci�n de prioridad 1,2 y 3 se satisfacen.</li>
+		</ul>
+		<p>Las pautas describen c�mo hacer p�ginas Web accesibles sin sacrificar el dise�o, ofreciendo esa flexibilidad que es necesaria para que la informaci�n sea accesible bajo diferentes situaciones y proporcionando m�todos que permiten su transformaci�n en p�ginas �tiles e inteligibles.</p>
+		<p>Igualmente, se han desarrollado <a href="http://w3.org/TR/ATAG10/" hreflang="en">Pautas de Accesibilidad para Herramientas de Autor</a>, cuyo objetivo es ayudar a los desarrolladores de software a la hora de crear herramientas de autor para producir contenido Web accesible. Tambi�n se han desarrollado <a href="http://w3.org/TR/xag" hreflang="en">Pautas de Accesibilidad para <acronym title="eXtensible Markup Language" xml:lang="en">XML</acronym>
+			</a>, donde se explica c�mo asegurar la accesibilidad de aplicaciones basadas en XML. Y por �ltimo, <a href="http://w3.org/TR/UAAG10/" hreflang="en">Pautas de Accesibilidad para Agentes de Usuario 1.0</a>, donde se explica c�mo hacer accesible los navegadores, reproductores multimedia y otras tecnolog�as asistivas.</p>
+			
+		<p>Por otro lado, se han desarrollado otro tipo de documentos como las <a href="http://w3.org/TR/WCAG10-TECHS/" hreflang="en">T�cnicas para Pautas de Accesibilidad al Contenido en la Web</a>, que ofrecen una serie de ejemplos de etiquetado y explicaciones muy detalladas de c�mo implementar las Pautas de Accesibilidad al contenido en la Web. Entre ellas se pueden destacar <a href="http://www.w3.org/TR/WCAG10-CORE-TECHS/" hreflang="en">T�cnicas esenciales para Pautas de Accesibilidad al Contenido en la Web 1.0</a>, las <a href="http://www.w3.org/TR/WCAG10-HTML-TECHS/" hreflang="en">T�cnicas HTML para Pautas de Accesibilidad al Contenido a la Web 1.0</a> y las <a href="http://www.w3.org/TR/WCAG10-CSS-TECHS/" hreflang="en">T�cnicas CSS para Pautas de Accesibilidad al Contenido en la Web 1.0.</a>
+		</p>
+		<h2 id="ejemplo">Ejemplos</h2>
+		<p class="invisible">
+			<a title="Ir directamente a la infomaci�n complementaria" href="#masinfo">Saltar Ejemplos.</a>
+		</p>
+		<p>Un ejemplo de <em>prioridad 1</em> ser�a la identificaci�n clara de cualquier cambio de idioma que se pueda producir en el texto de un documento. Es decir, si se utilizan diferentes idiomas es necesario que cualquier cambio est� claramente se�alado con el atributo <code>lang</code>:</p>
+		<p>Un ejemplo de c�digo correcto ser�a el siguiente:</p>
+		<pre>
+            <code>&lt;p&gt;</code>
+                <code>&lt;q&gt;</code>Buenos d�as Philip<code>&lt;/q&gt;</code>
+                <code>&lt;q lang="en"&gt;</code>Good morning<code>&lt;/q&gt;</code>. Respondi� Philip en ingl�s.
+                <code>&lt;q&gt;</code>�Qu� tal est�s?<code>&lt;/q&gt;</code>
+                <code>&lt;q lang="fr"&gt;</code>Tr�s bien.<code>&lt;/q&gt;</code> Volvi� a responder, pero esta vez en franc�s.
+            <code>&lt;/p&gt;</code>
+		</pre>
+		<p>Otro ejemplo de <em>prioridad 1</em> ser�a la utilizaci�n del atributo <code>alt</code> para incorporar texto equivalente al contenido de una imagen cuando se quieren utilizar gr�ficos; esto permitir�a que dispositivos o personas que no pueden visualizar los gr�ficos, obtengan una representaci�n alternativa textual. El c�digo correspondiente ser�a:</p>
+		<pre>
+			<code>&lt;img src="wai.png" alt="Web Accessibility Initiative" lang="en"/&gt;</code>
+		</pre>
+		<div class="figure">
+			<p class="image">
+				<a href="http://www.w3.org/WAI/" hreflang="en">
+					<img src="images/wai.png" width="212" height="48" alt="Web Accessibility Initiative" xml:lang="en"/>
+				</a>
+			</p>
+		</div>
+		<h2 id="masinfo">M�s informaci�n sobre Accesibilidad Web</h2>
+		<h3>Introducci�n:</h3>
+		<dl>
+			<dt>
+				<a href="http://www.w3.org/WAI/intro/accessibility" hreflang="en">Introducci�n a la Accesibilidad Web</a>. Disponible una <a href="http://www.w3c.es/Traducciones/es/WAI/intro/accessibility" title="versi�n en espa�ol de la introducci�n a la accesibilidad Web">versi�n en espa�ol</a>
+			</dt>
+			<dd>Breve introducci�n sobre lo que es la Accesibilidad Web y su importancia.</dd>
+			<dt>
+				<a href="http://www.w3.org/WAI/gettingstarted/Overview.html.en" hreflang="en">Creando un Sitio Web Accesible</a>. Disponible una <a href="http://www.w3.org/WAI/gettingstarted/Overview.html.es" title="versi�n en espa�ol de la introducci�n a la creaci�n de sitios Web accesibles">versi�n en espa�ol</a>
+			</dt>
+			<dd>Introducci�n donde se pueden encontrar muchas referencias para aquellos que comienzan con la Accesibilidad Web.</dd>
+			<dt>
+				<a href="http://www.w3.org/Talks/WAI-Intro/slide1-0" hreflang="en">Visi�n general de WAI</a>
+			</dt>
+			<dd>Presentaci�n <span xml:lang="en">online</span> en la que se explica la importancia que tiene la accesibilidad Web y lo que la Iniciativa de Accesibilidad Web est� haciendo.</dd>
+			<dt>
+				<a href="http://www.w3.org/WAI/EO/Drafts/PWD-Use-Web/" hreflang="en">C�mo utilizan la Web personas con diversidad funcional</a>.</dt>
+			<dd>En este documento (borrador de trabajo) se describen los requisitos de accesibilidad de usuarios con diferentes tipos de discapacidad.</dd>
+			<dt>
+				<a href="http://www.w3.org/WAI/impl/software" hreflang="en">Selecci�n y uso de herramientas de autor</a>
+			</dt>
+			<dd>Muestra algunas de las dudas que surgen cuando hay que elegir el software adecuado para hacer p�ginas Web accesibles.</dd>
+			<dt>
+				<a href="http://www.w3.org/WAI/bcase/benefits.html" hreflang="en">Beneficios Auxiliares del dise�o Web Accesible</a>.</dt>
+			<dd>Ayuda en la preparaci�n de proyectos empresariales para implementar la accesibilidad Web.</dd>
+			<dt>
+				<a href="http://www.w3.org/WAI/bcase/Overview" hreflang="en">Desarrollo de un Proyecto de Accesibilidad Web para su organizaci�n</a>
+			</dt>
+			<dd>Este documento describe los diferentes beneficios de la accesibilidad Web, incluyendo los beneficios que puede obtener una empresa. Destaca tambi�n los factores que intervienen en el desarrollo de un proyecto de accesibilidad Web.</dd>
+			<dt>
+				<a href="http://www.w3.org/WAI/impl/Overview.html" hreflang="en-us">Plan de implementaci�n de accesibilidad Web</a>
+			</dt>
+			<dd>Aqu� se puede ver una lista detallada de elementos a tener en cuenta a la hora de implementar accesibilidad a un sitio Web.</dd>
+			<dt>
+				<a href="http://www.w3.org/WAI/eval/Overview.html" hreflang="en">evaluaci�n de la accesibilidad de los sitios Web: Introducci�n.</a>
+			</dt>
+			<dd>Se trata de un documento que destaca los diferentes m�todos para evaluar la accesibilidad de un sitio Web. Proporciona procedimientos generales y consejos para realizar una evaluaci�n en diferentes situaciones, desde la evaluaci�n durante el desarrollo de un sitio Web hasta la monitorizaci�n de un sitio Web que ya est� en  funcionamiento.</dd>
+		</dl>
+		<h3>Gu�as Breves:</h3>
+		<dl>
+			<dt>
+				<a href="http://www.w3.org/WAI/References/QuickTips/" hreflang="en">Gu�a breve para crear sitios Web accesibles</a>. Disponibles versiones <a href="http://www.w3.org/WAI/References/QuickTips/qt.es.htm" title="versi�n en espa�ol de la gu�a breve para crear sitios Web accesibles">en espa�ol</a>, <a href="http://www.w3.org/WAI/References/QuickTips/qt.ca.htm" hreflang="ca" xml:lang="ca" title="versi�n en catal� de la gu�a breve para crear sitios Web accesibles">catal�</a> y  <a href="http://www.sidar.org/recur/desdi/wai/guia_gl.php#gal" hreflang="gl" xml:lang="gl" title="versi�n en gallego de la gu�na breve para crear sitios Web accesibles">galego</a>
+			</dt>
+			<dd>10 ideas b�sicas para hacer sitios Web accesibles, que est� disponible en formato de tarjeta de referencia. </dd>
+		</dl>
+		<h3>Preguntas frecuentes:</h3>
+		<dl>
+			<dt>
+				<a href="http://www.w3.org/1999/05/WCAG-REC-fact" hreflang="en">Preguntas frecuentes sobre las &quot;Pautas de Accesibilidad al Contenido en la Web (WCAG)&quot;</a>.  Disponible una <a href="http://www.discapnet.es/web_accesible/WCAG-REC-fact.html" title="versi�n en espa�ol de de las preguntas frecuentes sobre las pautas de accesibilidad al contenido Web">versi�n en espa�ol</a>.</dt>
+			<dd>Respuestas a 20 de las dudas m�s frecuentes que surgen sobre WCAG.</dd>
+		</dl>
+		<h3>Directrices (pautas):</h3>
+		<dl>
+			<dt>
+				<a href="http://www.w3.org/TR/WCAG10/" hreflang="en">Pautas de Accesibilidad al Contenido en la Web 1.0</a>. Disponibles versiones <a href="http://www.discapnet.es/web_accesible/wcag10/WAI-WEBCONTENT-19990505_es.html" title="versi�n en espa�ol de las pautas de accesibilidad al contenido en la Web">en espa�ol</a> y <a href="http://www.ub.es/bid/06w3c.htm" hreflang="ca" xml:lang="ca" title="versi�n en catal� de las pautas de accesibilidad al contenido en la Web">catal�</a>
+			</dt>
+			<dd>Explica en detalle c�mo hacer una p�gina Web accesible para personas con diferentes tipos de discapacidad. </dd>
+		</dl>
+		<h3>Tabla de puntos de verificaci�n:</h3>
+		<dl>
+			<dt>
+				<a href="http://www.w3.org/TR/WCAG10/full-checklist" hreflang="en">Tabla de Puntos de
+Verificaci�n para las Pautas de Accesibilidad al Contenido en la Web 1.0</a>. Disponible una <a href="http://www.discapnet.es/web_accesible/wcag10/full-checklist.html" title="Versi�n en espa�ol de la tabla de puntos de verificaci�n de las pautas de accesibilidad al contenido en la Web">versi�n en espa�ol</a>
+			</dt>
+			<dd>Lista de puntos de verificaci�n priorizados para hacer p�ginas Web accesibles, a modo de resumen de la informaci�n contenida en las Pautas de Accesibilidad al Contenido.</dd>
+		</dl>
+		<h3>T�cnicas:</h3>
+		<dl>
+			<dt>
+				<a href="http://www.w3.org/TR/WCAG10-TECHS/" hreflang="en">T�cnicas para Pautas de
+Accesibilidad al Contenido en la Web 1.0</a>. Disponible una <a href="http://www.discapnet.es/web_accesible/tecnicas/WCAG10-TECHS-20001106_es.html" title="Versi�n en espa�ol de las T�cnicas para pautas de accesibilidad al contenido en la Web">versi�n en espa�ol</a>
+			</dt>
+			<dd>Ejemplos de etiquetado y explicaciones muy detalladas de c�mo implementar las Pautas de Accesibilidad al contenido en la Web. Incluye:
+				<ul>
+					<li>
+						<a href="http://www.w3.org/TR/WCAG10-CORE-TECHS/" hreflang="en">T�cnicas
+esenciales para Pautas de Accesibilidad al Contenido en la Web 1.0</a>. Disponible una <a href="http://www.discapnet.es/web_accesible/tecnicas/core/WCAG10-CORE-TECHS-20001106.html" title="versi�n en espa�ol de las T�cnicas esenciales para las pautas de accesibilidad al contenido en la Web">versi�n en espa�ol</a>.
+					</li>
+					<li>
+						<a href="http://www.w3.org/TR/WCAG10-HTML-TECHS/" hreflang="en">T�cnicas HTML para Pautas de Accesibilidad al Contenido en la Web 1.0</a>. Disponible una <a href="http://www.discapnet.es/web_accesible/tecnicas/html/WCAG10-HTML-TECHS_es.html" title="versi�n en espa�ol de las T�cnicas HTML para las pautas de la accesibilidad al contenido en la Web">versi�n en espa�ol</a>.
+					</li>
+					<li>
+						<a href="http://www.w3.org/TR/WCAG10-CSS-TECHS/" hreflang="en">T�cnicas CSS para Pautas de Accesibilidad al Contenido en la Web 1.0</a>. Disponible una <a href="http://www.discapnet.es/web_accesible/tecnicas/css/WCAG10-CSS-TECHS_es.html" title="versi�n en espa�ol de las T�cnicas CSS para pautas de accesibilidad al contenido Web">versi�n en espa�ol</a>.
+					</li>
+				</ul>
+			</dd>
+		</dl>
+		<h3>Herramientas de evaluaci�n y reparaci�n:</h3>
+		<dl>
+			<dt>
+				<a href="http://www.w3.org/WAI/eval/" hreflang="en">evaluaci�n de la accesibilidad de
+     p�ginas Web</a>
+			</dt>
+			<dd>M�todos para realizar revisiones preliminares y evaluaciones de conformidad de p�ginas Web.</dd>
+			<dt>
+				<a href="http://www.w3.org/WAI/ER/existingtools" hreflang="en">Herramientas de
+     evaluaci�n y reparaci�n</a>
+			</dt>
+			<dd>Enlaces y descripciones de m�s de 30 herramientas diferentes que ayudan en la evaluaci�n y transformaci�n de contenido Web.</dd>
+		</dl>
+		<h3>Otros recursos:</h3>
+		<dl>
+			<dt>P�gina principal de <a href="">WAI-<abbr title="Accessible Rich Internet Applications">ARIA</abbr></a></dt>
+			<dd>P�gina principal de Accesibilidad en el contenido din�mico y en las aplicaciones Web eriquecidas.</dd>
+			<dt>
+				<a href="http://www.w3.org/WAI/" hreflang="en">P�gina principal de WAI</a>
+			</dt>
+			<dd>P�gina principal de la Iniciativa de Accesibilidad Web del W3C, donde se puede encontrar la informaci�n m�s actual sobre accesibilidad Web.</dd>
+			<dt>
+				<a href="http://www.w3.org/WAI/References/" hreflang="en">Enlaces a informaci�n general sobre Accesibilidad Web</a>
+			</dt>
+			<dd>Recursos adicionales de accesibilidad Web incluidos recursos externos al W3C.</dd>
+		</dl>
+		<?php include_once("./inc/pie.inc.php")?>
+	</body>
+</html>
